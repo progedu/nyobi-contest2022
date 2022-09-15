@@ -15,6 +15,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HELLO_WORLD_LABENEKO_202206 }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NYOBI_CONTEST2022 }}'
           channelId: live
-          projectId: hello-world-labeneko-202206
+          projectId: nyobi-contest2022
