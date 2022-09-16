@@ -41,7 +41,21 @@ export default function Index() {
     });
     gsap.fromTo(
       'h2',
-      { opacity: 0, y: 10 }, //fromの設定
+      { opacity: 0, y: 30 }, //fromの設定
+      {  //toの設定
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: 'h1',
+          start: 'top center', //要素のトップが、画面の中央まできたら開始
+          end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+        },
+      }
+    )
+    gsap.fromTo(
+      '#comingsoon',
+      { opacity: 0, y: 30 }, //fromの設定
       {  //toの設定
         opacity: 1,
         y: 0,
@@ -81,7 +95,7 @@ export default function Index() {
         <hr />
         <div>
           <h2>応募作品</h2>
-          <div id={styles.comingsoon}>Coming Soon</div>
+          <div id="comingsoon" class={styles.comingsoon}>Coming Soon</div>
         </div>
         <hr />
       </main>
