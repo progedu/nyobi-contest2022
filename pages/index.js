@@ -107,7 +107,7 @@ export default function Index() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>N予備校 動くWEBページ<br />コンテスト2022夏</title>
+        <title>N予備校 動くWEBページコンテスト2022夏</title>
         <meta name="description" content="N予備校 動くWEBページコンテスト2022夏" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
