@@ -9,7 +9,8 @@ export default function Index() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
-    gsap.fromTo(
+    const h1tl = gsap.timeline()
+    h1tl.fromTo(
       'h1',
       { opacity: 0, y: 10 }, //fromの設定
       {  //toの設定
@@ -23,6 +24,8 @@ export default function Index() {
         },
       }
     )
+    .to("#ugoku", {color: 'rgba(255,90,0,0.8)', duration: 0})
+    .fromTo("#summer", { opacity: 0 }, {opacity: 1, color: 'rgba(133,169,255,1)', duration: 0.1});
     const targets = gsap.utils.toArray("hr");
     targets.forEach(target => {
       gsap.fromTo(
@@ -72,7 +75,7 @@ export default function Index() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>N予備校 動くWEBページコンテスト2022夏</title>
+        <title>N予備校 動くWEBページ<br />コンテスト2022夏</title>
         <meta name="description" content="N予備校 動くWEBページコンテスト2022夏" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -82,10 +85,10 @@ export default function Index() {
               N予備校
           </div>
           <h1 className={styles.title}>
-            動くWEBページコンテスト
+            <span id="ugoku">動く</span>WEBページコンテスト
           </h1>
           <div className={styles.title_footer}>
-              2022夏
+              2022 <span id="summer">夏</span>
           </div>
           <hr />
           <p className={styles.description}>
