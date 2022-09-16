@@ -59,7 +59,11 @@
   margin: 0;
   line-height: 1.15;
   font-size: 8vw;
-  margin-bottom: 20px;
+}
+
+.result {
+  line-height: 1.15;
+  font-size: 6vw;
 }
 
 .title,
@@ -125,11 +129,21 @@
   margin-left: 0.5rem;
 }
 
-.comingsoon {
-  background-color: #666;
+.marinebox {
+  background-color: #f1f1f1;
+  border: 5px rgb(81, 134, 176) solid;
   width: 90vw;
   text-align: center;
   padding: 50px;
   font-size: 1.25rem;
   margin: 50px 0;
+  position: relative;
+}
+
+.marinebox img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  right: -10px;
 }
