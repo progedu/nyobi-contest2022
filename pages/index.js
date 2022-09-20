@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css';
 import { useEffect } from 'react'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
+import { Grid } from '@mui/material';
+import ContentCard from './contentCard';
 
 export default function Index() {
 
@@ -101,7 +103,23 @@ export default function Index() {
         },
       }
     )
-    
+    targets = gsap.utils.toArray(".content-card");
+    targets.forEach(target => {
+      gsap.fromTo(
+        target,
+        { opacity: 0, y: 100 }, //fromの設定
+        {  //toの設定
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top 80%', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      )
+    });
   }, [])
 
   return (
@@ -109,6 +127,7 @@ export default function Index() {
       <Head>
         <title>N予備校 動くWEBページコンテスト2022夏</title>
         <meta name="description" content="N予備校 動くWEBページコンテスト2022夏" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet"></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
@@ -122,26 +141,61 @@ export default function Index() {
           <div className={styles.title_footer}>
               2022 <span id="summer">夏</span>
           </div>
-          <div class="border" />
+          <div className="border" />
           <p className={styles.description}>
             N予備校 動くWebページコンテスト2022夏は、N予備校プログラミング入門コースで学んだN・S高校生、N中等部生ならびにN予備校受講者が、 プログラミングの成果物を競うコンテストです。
           </p>
         </div>
-        <div class="border" />
+        <div className="border" />
         <h2 className={styles.result}>結果発表</h2>
         <div id="result" className={styles.marinebox}>
           <img src='./suica.png' />
           結果発表は、2022年10月6日(木曜日)を予定しています
         </div>
-        <div class="border" />
+        <div className="border" />
         <div>
           <h2>応募作品</h2>
+          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Grid item xs={12} sm={6} md={4}>
+              <ContentCard
+                title='ストップウォッチ'
+                author='エビリオ'
+                label_name='N中等部'
+                label_color='warning'
+                img_url='./entry/nc01.png'
+                website_url='https://ebirio.github.io/Stopwatch/Stopwatch.html'
+                github_url='https://github.com/ebirio/Stopwatch'
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ContentCard
+                title='youtube-archive'
+                author='marukun_'
+                label_name='N中等部'
+                label_color='warning'
+                img_url='./entry/nc02.png'
+                website_url='https://marukun712.github.io/youtube-archive/html/'
+                github_url='https://github.com/marukun712/youtube-archive'
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ContentCard
+                title='画像アップローダー'
+                author='しゃけ'
+                label_name='N中等部'
+                label_color='warning'
+                img_url='./entry/nc03.png'
+                website_url='https://tokuzou0829.github.io/image-upload-page/'
+                github_url='https://github.com/tokuzou0829/image-upload-page'
+              />
+            </Grid>
+          </Grid>
           <div id="comingsoon" className={styles.marinebox}>
             <img src='./kakigoori.png' />
             近日公開予定
           </div>
         </div>
-        <div class="border" />
+        <div className="border" />
       </main>
     </div>
   )
