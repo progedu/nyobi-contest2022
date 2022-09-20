@@ -189,10 +189,10 @@ export default function Index() {
                 github_url='https://github.com/tokuzou0829/image-upload-page'
               />
             </Grid>
-          </Grid>
+          </Grid><br /><br />
           <div id="comingsoon" className={styles.marinebox}>
             <img src='./kakigoori.png' />
-            近日公開予定
+            N予備校部門とN・S高等学校部門の応募作品は近日公開予定
           </div>
         </div>
         <div className="border" />
