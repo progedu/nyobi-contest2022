@@ -160,11 +160,7 @@ export default function Index() {
           <h2>応募作品</h2>
           <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 1, md: 2, lg: 3 }}>
             {contentCards}
-          </Grid><br /><br />
-          <div id="comingsoon" className={styles.marinebox}>
-            <img src='./kakigoori.png' />
-            N予備校部門の応募作品は近日公開予定
-          </div>
+          </Grid>
         </div>
         <div className="border" />
       </main>

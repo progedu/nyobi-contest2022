@@ -21,7 +21,7 @@ html {
 
 body {
   color: #333333;
-  background: url('/marine.png') no-repeat #6bd6fa;
+  background: url('/marine.png') no-repeat, linear-gradient(#6bd6fa 50%, #20738d);
   background-size: contain;
 }
 
