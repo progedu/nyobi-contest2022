@@ -130,10 +130,13 @@ export default function Index() {
       <Head>
         <title>N予備校 動くWEBページコンテスト2022夏</title>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:domain" content="nyobi-contest2022.web.app" />
         <meta name="twitter:image" content="https://nyobi-contest2022.web.app/tcard.png" />
         <meta name="description" content="N予備校 動くWEBページコンテスト2022夏の結果発表ページです。結果発表は2022年10月6日(木)を予定しています。" />
         <meta name="twitter:description" content="N予備校 動くWEBページコンテスト2022夏の結果発表ページです。結果発表は2022年10月6日(木)を予定しています。" />
+        <meta property="og:url" content="https://nyobi-contest2022.web.app"/>
+        <meta property="og:title" content="N予備校 動くWEBページコンテスト2022夏"/>
+        <meta property="og:description" content="N予備校 動くWEBページコンテスト2022夏の結果発表ページです。結果発表は2022年10月6日(木)を予定しています。"/>
+        <meta property="og:image" content="https://nyobi-contest2022.web.app/tcard.png"/>
         <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet"></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
