@@ -8,7 +8,8 @@ import { Grid } from '@mui/material';
 import ContentCard from './contentCard';
 
 export default function Index() {
-
+  const entries = require('./entries.json');
+  console.log(entries);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
     const h1tl = gsap.timeline()
@@ -120,7 +121,9 @@ export default function Index() {
         }
       )
     });
-  }, [])
+  }, []);
+
+  const contentCards = buildContentCards(entries);
 
   return (
     <div className={styles.container}>
@@ -156,138 +159,7 @@ export default function Index() {
         <div>
           <h2>応募作品</h2>
           <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 1, md: 2, lg: 3 }}>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='Bucket List'
-                author='Kosuke'
-                label_name='N・S高等学校'
-                label_color='error'
-                img_url='./entry/nh01.png'
-                website_url='https://kosuke-tanoue-kt.github.io/Bucket-List/'
-                github_url='https://github.com/Kosuke-Tanoue-KT/Bucket-List'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='ポジティブモンスター'
-                author='うどん'
-                label_name='N・S高等学校'
-                label_color='error'
-                img_url='./entry/nh02.png'
-                website_url='https://udon-japanese.github.io/positive-monster/positive.html'
-                github_url='https://github.com/Udon-japanese/positive-monster'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='ブロック崩し'
-                author='ねこむら'
-                label_name='N・S高等学校'
-                label_color='error'
-                img_url='./entry/nh03.png'
-                website_url='https://11201ozi.github.io/brick-break/index.html'
-                github_url='https://github.com/11201ozi/brick-break'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='ナンプレ（数独）'
-                author='グラタン'
-                label_name='N・S高等学校'
-                label_color='error'
-                img_url='./entry/nh04.png'
-                website_url='https://macaroni-guratan.github.io/nanpure/'
-                github_url='https://github.com/macaroni-guratan/nanpure'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='迷路QUEST'
-                author='kukki-'
-                label_name='N・S高等学校'
-                label_color='error'
-                img_url='./entry/nh05.png'
-                website_url='https://marotyuket.github.io/summer2022/home/home.html'
-                github_url='https://github.com/marotyuket/summer2022'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='15puzzle'
-                author='Nyanchl'
-                label_name='N・S高等学校'
-                label_color='error'
-                img_url='./entry/nh06.png'
-                website_url='https://nyanchl.github.io/Brain_tease/'
-                github_url='https://github.com/Nyanchl/Brain_tease'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='パーソナルカラー診断'
-                author='コッペパン'
-                label_name='N・S高等学校'
-                label_color='error'
-                img_url='./entry/nh07.png'
-                website_url='https://yoneyamarise.github.io/color/color.html'
-                github_url='https://github.com/yoneyamarise/color'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='フラッシュカード'
-                author='イワシュン'
-                label_name='N・S高等学校'
-                label_color='error'
-                img_url='./entry/nh08.png'
-                website_url='https://iwashun22.github.io/flash-card/'
-                github_url='https://github.com/iwashun22/flash-card'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='My Book List'
-                author='Haru'
-                label_name='N・S高等学校'
-                label_color='error'
-                img_url='./entry/nh09.png'
-                website_url='https://haru-036.github.io/book-list/book-list.html'
-                github_url='https://github.com/haru-036/book-list.git'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='ストップウォッチ'
-                author='エビリオ'
-                label_name='N中等部'
-                label_color='warning'
-                img_url='./entry/nc01.png'
-                website_url='https://ebirio.github.io/Stopwatch/Stopwatch.html'
-                github_url='https://github.com/ebirio/Stopwatch'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='youtube-archive'
-                author='marukun_'
-                label_name='N中等部'
-                label_color='warning'
-                img_url='./entry/nc02.png'
-                website_url='https://marukun712.github.io/youtube-archive/html/'
-                github_url='https://github.com/marukun712/youtube-archive'
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <ContentCard
-                title='画像アップローダー'
-                author='しゃけ'
-                label_name='N中等部'
-                label_color='warning'
-                img_url='./entry/nc03.png'
-                website_url='https://tokuzou0829.github.io/image-upload-page/'
-                github_url='https://github.com/tokuzou0829/image-upload-page'
-              />
-            </Grid>
+            {contentCards}
           </Grid><br /><br />
           <div id="comingsoon" className={styles.marinebox}>
             <img src='./kakigoori.png' />
@@ -298,4 +170,26 @@ export default function Index() {
       </main>
     </div>
   )
+}
+
+function buildContentCards(entries) {
+  const contentCards = [];
+  for (let entry of entries) {
+    const [ img_url, label_name, author, title, website_url, github_url ] = entry;
+    const card = (
+      <Grid item xs={12} sm={12} md={6} lg={4}>
+        <ContentCard
+          title={title}
+          author={author}
+          label_name={label_name}
+          label_color='warning'
+          img_url={img_url}
+          website_url={website_url}
+          github_url={github_url}
+        />
+      </Grid>
+    )
+    contentCards.push(card);
+  }
+  return contentCards;
 }
