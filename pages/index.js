@@ -37,9 +37,9 @@ export default function Index() {
       console.log(duration);
       gsap.fromTo(
         target,
-        { left: "-50%", height }, //fromの設定
+        { left: "-45%", height }, //fromの設定
         {  //toの設定
-          left: "50%",
+          left: "45%",
           height,
           duration: duration,
           repeat: -1,
