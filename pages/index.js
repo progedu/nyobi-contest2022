@@ -33,12 +33,14 @@ export default function Index() {
     let targets = gsap.utils.toArray(".border_sensui");
     targets.forEach(target => {
       const duration = Math.floor(Math.random() * 10) + 2;
+      const height = Math.floor(Math.random() * 50) + 30;
       console.log(duration);
       gsap.fromTo(
         target,
-        { left: "-55vw" }, //fromの設定
+        { left: "-55vw", height }, //fromの設定
         {  //toの設定
           left: "55vw",
+          height,
           duration: duration,
           repeat: -1,
           scrollTrigger: {
