@@ -32,6 +32,81 @@ body {
   box-shadow: 1px 1px 1px #0aa4e1;
 }
 
+.border_sensui {
+  position: relative;
+  height: 50px;
+  margin: 30px 0;
+}
+
 .rule-card {
   margin-bottom: 20px;
+}
+
+.ribbon {
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  color: #FFF;
+  background: #21496f;
+  font-size: 4vw;
+  width: 90vw;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.ribbon:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}
+
+.ribbon:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  right: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-left: solid 20px rgb(149, 158, 155);
+}
+
+.ribbon img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  right: -10px;
+}
+
+.ribbon_result {
+  color: #FFF;
+  background: #a23d1e;
+}
+
+.ribbon_contest {
+  color: #FFF;
+  background: #a23d1e;
+}
+
+.marinebox {
+  background-color: #f1f1f1;
+  border: 5px rgb(81, 134, 176) solid;
+  width: 90vw;
+  text-align: center;
+  padding: 50px;
+  font-size: 1.25rem;
+  margin: 50px 0;
+  position: relative;
+}
+
+.marinebox img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  right: -10px;
 }
