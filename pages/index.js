@@ -8,7 +8,7 @@ import { Grid } from '@mui/material';
 import ContentCard from './contentCard';
 
 export default function Index() {
-  const entries = require('./entries.json');
+  const entries = require('./entries.json?20220922');
   console.log(entries);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
