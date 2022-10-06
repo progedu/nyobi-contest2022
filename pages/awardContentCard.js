@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { Image, OpenInNew } from '@mui/icons-material';
 import { Chip, Link } from '@mui/material';
 
-export default function ContentCard(props) {
+export default function AwardContentCard(props) {
   return (
     <div className='award-content-card'>
       <img
