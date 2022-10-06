@@ -98,7 +98,7 @@ body {
   width: 90vw;
   text-align: center;
   padding: 50px;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin: 50px 0;
   position: relative;
 }
@@ -109,4 +109,140 @@ body {
   height: 100px;
   top: -50px;
   right: -10px;
+}
+
+.award_box {  
+  display: block;
+  position: relative;
+  margin: 20px auto;
+  padding: 20px 0;
+  width: 90%;
+  background: #f1f1f1;
+  border-radius: 10px;;
+}
+
+.category {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 0 0 -20px;
+  width: calc(100% + 20px);
+  font-size: 3vw;
+  color: white;
+  background: #3f7da3;
+}
+
+.category:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px #3f7da3;
+}
+
+.category:after {
+  position: absolute;
+  content: '';
+  top: calc(100% - 2px);
+  left: 20px;
+  width: calc(100% - 20px);
+  height: 1px;
+  border: none;
+  border-bottom: solid 15px #cbe0f1;
+}
+
+.award {
+  text-align: center;
+  width: calc(100% - 40px);
+  font-size: 4vw;
+  padding: 50px;
+  margin: 30px 20px;
+  position: relative;
+}
+
+.lw {
+  position: absolute;
+  width: 0%;
+  height: 20px;
+  background-color: goldenrod;
+  top: 0px;
+  left: 0px;
+}
+.lh {
+  position: absolute;
+  width: 20px;
+  height: 0%;
+  background-color: goldenrod;
+  top: 0px;
+  left: 0px;
+}
+.rw {
+  position: absolute;
+  width: 0%;
+  height: 20px;
+  background-color: goldenrod;
+  bottom: 0px;
+  right: 0px;
+}
+.rh {
+  position: absolute;
+  width: 20px;
+  height: 0%;
+  background-color: goldenrod;
+  bottom: 0px;
+  right: 0px;
+}
+
+.award.first {
+  background-color: rgb(239, 221, 122);
+}
+
+.award-content-card {
+  width: 90%;
+  margin: 5%;
+  text-align: center;
+}
+
+.award-content-card img.header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.award.second {
+  background-color: rgb(214, 214, 214);
+}
+
+.award.second .lw, .award.second .lh, .award.second .rw,.award.second .rh {
+  background-color: rgb(125, 125, 125);
+}
+
+.category.nh {
+  color: white;
+  background: #743fa3;
+}
+
+.category.nh:before {
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px #743fa3;
+}
+
+.category.nh:after {
+  border-bottom: solid 15px #c6b1d9;
+}
+
+.category.nc {
+  color: white;
+  background: #76a33f;
+}
+
+.category.nc:before {
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px #76a33f;
+}
+
+.category.nc:after {
+  border-bottom: solid 15px #afbe9c;
 }

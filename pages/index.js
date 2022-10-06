@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
 import { Button, Grid, Link } from '@mui/material';
 import ContentCard from './contentCard';
+import AwardContentCard from './awardContentCard';
 import { CenterFocusStrong, OpenInNew } from '@mui/icons-material';
 import { fontSize } from '@mui/system';
 
@@ -143,6 +144,159 @@ export default function Index() {
         }
       )
     });
+    targets = gsap.utils.toArray(".award_box");
+    targets.forEach(target => {
+      gsap.fromTo(
+        target,
+        { opacity: 0, y: 100 }, //fromの設定
+        {  //toの設定
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      )
+    });
+    targets = gsap.utils.toArray(".award.first");
+    targets.forEach(target => {
+      gsap.fromTo(
+        target.querySelector('.lw'),
+        { width: '0%' }, //fromの設定
+        {  //toの設定
+          width: '100%',
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      );
+      gsap.fromTo(
+        target.querySelector('.rw'),
+        { width: '0%' }, //fromの設定
+        {  //toの設定
+          width: '100%',
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      );
+      gsap.fromTo(
+        target.querySelector('.lh'),
+        { height: '0%' }, //fromの設定
+        {  //toの設定
+          height: '100%',
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      );
+      gsap.fromTo(
+        target.querySelector('.rh'),
+        { height: '0%' }, //fromの設定
+        {  //toの設定
+          height: '100%',
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      );
+      gsap.fromTo(
+        target,
+        { backgroundColor: 'rgb(255, 255, 255)' }, //fromの設定
+        {  //toの設定
+          backgroundColor: 'rgb(239, 221, 122)',
+          duration: 3,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      );
+    });
+    targets = gsap.utils.toArray(".award.second");
+    targets.forEach(target => {
+      gsap.fromTo(
+        target.querySelector('.lw'),
+        { width: '0%' }, //fromの設定
+        {  //toの設定
+          width: '100%',
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      );
+      gsap.fromTo(
+        target.querySelector('.rw'),
+        { width: '0%' }, //fromの設定
+        {  //toの設定
+          width: '100%',
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      );
+      gsap.fromTo(
+        target.querySelector('.lh'),
+        { height: '0%' }, //fromの設定
+        {  //toの設定
+          height: '100%',
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      );
+      gsap.fromTo(
+        target.querySelector('.rh'),
+        { height: '0%' }, //fromの設定
+        {  //toの設定
+          height: '100%',
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      );
+      gsap.fromTo(
+        target,
+        { backgroundColor: 'rgb(255, 255, 255)' }, //fromの設定
+        {  //toの設定
+          backgroundColor: 'rgb(214, 214, 214)',
+          duration: 3,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      );
+    });
   }, []);
 
   const contentCards = buildContentCards(entries);
@@ -180,15 +334,89 @@ export default function Index() {
           <div className="border" />
         </div>
         <h2 className="ribbon ribbon_result"><img src='./suica.png' />結果発表</h2>
-        <div id="result" className="marinebox">
-          結果発表は、2022年10月6日(木曜日)を予定しています
+
+        <div className="award_box">
+          <h3 className="category">N予備校部門</h3>
+          <h4 className="award first"><span className="lw"></span><span className="lh"></span><span className="rw"></span><span className="rh"></span>最優秀賞</h4>
+          <AwardContentCard
+            title='1分間タイピングゲーム'
+            author='ミニミニコ'
+            img_url='./entry/ny02.png'
+            website_url="https://chikako2020.github.io/typingGame/top.html"
+            github_url="https://github.com/chikako2020/typingGame"
+          />
+          <h4 className="award second"><span className="lw"></span><span className="lh"></span><span className="rw"></span><span className="rh"></span>アイデア賞</h4>
+          <AwardContentCard
+            title='おみくじ'
+            author='shiro'
+            img_url='./entry/ny05.png'
+            website_url="https://hamuyashiki.github.io/omikuji/"
+            github_url="https://github.com/hamuyashiki/omikuji"
+          />
+          <h4 className="award second"><span className="lw"></span><span className="lh"></span><span className="rw"></span><span className="rh"></span>技術特別賞</h4>
+          <AwardContentCard
+            title='四目並べ'
+            author='まさし'
+            img_url='./entry/ny04.png'
+            website_url="https://ma3shi.github.io/4-in-a-row/"
+            github_url="https://github.com/ma3shi/4-in-a-row"
+          />
+          <h4 className="award second"><span className="lw"></span><span className="lh"></span><span className="rw"></span><span className="rh"></span>デザイン特別賞</h4>
+          <AwardContentCard
+            title='iroin'
+            author='sada'
+            img_url='./entry/ny14.png'
+            website_url="https://omawkusni.github.io/iroin/index.html"
+            github_url="https://github.com/omawkusni/iroin"
+          />
         </div>
+
+        <div className="award_box">
+          <h3 className="category nh">N・S高等学校部門</h3>
+          <h4 className="award first"><span className="lw"></span><span className="lh"></span><span className="rw"></span><span className="rh"></span>最優秀賞</h4>
+          <AwardContentCard
+            title='フラッシュカード'
+            author='イワシュン'
+            img_url='./entry/nh08.png'
+            website_url="https://iwashun22.github.io/flash-card/"
+            github_url="https://github.com/iwashun22/flash-card"
+          />
+          <h4 className="award second"><span className="lw"></span><span className="lh"></span><span className="rw"></span><span className="rh"></span>優秀賞</h4>
+          <AwardContentCard
+            title='ナンプレ（数独）'
+            author='グラタン'
+            img_url='./entry/nh04.png'
+            website_url="https://macaroni-guratan.github.io/nanpure/"
+            github_url="https://github.com/macaroni-guratan/nanpure"
+          />
+        </div>
+
+        <div className="award_box">
+          <h3 className="category nc">N中等部部門</h3>
+          <h4 className="award first"><span className="lw"></span><span className="lh"></span><span className="rw"></span><span className="rh"></span>最優秀賞</h4>
+          <AwardContentCard
+            title='youtube-archive'
+            author='marukun_'
+            img_url='./entry/nc02.png'
+            website_url="https://marukun712.github.io/youtube-archive/html/"
+            github_url="https://github.com/marukun712/youtube-archive"
+          />
+          <h4 className="award second"><span className="lw"></span><span className="lh"></span><span className="rw"></span><span className="rh"></span>優秀賞</h4>
+          <AwardContentCard
+            title='画像アップローダー'
+            author='しゃけ'
+            img_url='./entry/nc03.png'
+            website_url="https://tokuzou0829.github.io/image-upload-page/"
+            github_url="https://github.com/tokuzou0829/image-upload-page"
+          />
+        </div>
+
         <img src='./submarineW.png' className="border_sensui" />
         <h2 className="ribbon ribbon_contest"><img src='./haibisukasu.png' />コンテスト規程</h2>
         <div id="result" className="marinebox">
           応募ページをご覧ください <br /><b>(※応募受付は終了しています)</b><br /><br />
           <Link target="_blank" href='https://progedu.github.io/webappcontest/2022/summer/entry/index.html'>
-            <Button variant="contained" component="label" color="info" style={{whiteSpace: 'nowrap', fontSize: '2vw', width: '60vw'}}>コンテスト応募ページ<OpenInNew /></Button>
+            <Button variant="contained" component="label" color="info" style={{whiteSpace: 'nowrap', fontSize: '1.2em', width: '60vw'}}>コンテスト応募ページ<OpenInNew /></Button>
           </Link>
         </div>
         <img src='./submarineW.png' className="border_sensui" />
